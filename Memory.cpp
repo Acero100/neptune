@@ -1,3 +1,6 @@
+#include <windows.h>
+#include "Memory.h"
+
 namespace Memory {
     bool compareMemory(const char* pData, const char* bMask, const char* szMask)
     {
