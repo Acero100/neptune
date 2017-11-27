@@ -1,0 +1,24 @@
+-- Basic commands
+ff [p]
+fire [p]
+kick [p]
+ws [p] [#]
+ws [p] [#] 
+music [id]
+sp [p] (sparkles)
+bigfire [p]
+btools [p]
+fecheck (prints out fe status in console)
+statchange [p] [statname] [value]
+particles [id]
+removefog
+trumped [p]
+clintoned [p]
+pepe [p]
+--Skybox commands
+skytrump
+skypepe
+skybox [id]
+----
+[p] = target
+[#] = number
