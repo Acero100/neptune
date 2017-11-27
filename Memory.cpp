@@ -11,7 +11,7 @@ namespace Memory {
     }
   
      long vftableScan(const char* vftable)
-{
+     {
 	MEMORY_BASIC_INFORMATION MBI = { 0 };
 	SYSTEM_INFO SI = { 0 };
 	GetSystemInfo(&SI);
@@ -32,5 +32,5 @@ namespace Memory {
 		}
 	} while (Start < End);
 	return 0;
-}
+     }
 }
