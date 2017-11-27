@@ -10,7 +10,7 @@ namespace Memory {
 	   return 1;
     }
   
-     DWORD Scan(const char* vftable)
+     long vftableScan(const char* vftable)
      {
 	    MEMORY_BASIC_INFORMATION MBI = { 0 };
 	    SYSTEM_INFO SI = { 0 };
@@ -18,7 +18,7 @@ namespace Memory {
 	    DWORD Start = (DWORD)SI.lpMinimumApplicationAddress;
   	  DWORD End = (DWORD)SI.lpMaximumApplicationAddress;
 	    do
-      {
+     	 {
 	  	  while (VirtualQuery((void*)Start, &MBI, sizeof(MBI))) {
 		  	  if ((MBI.Protect & PAGE_READWRITE) && !(MBI.Protect & PAGE_GUARD))
 	  		  {
