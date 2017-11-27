@@ -11,26 +11,26 @@ namespace Memory {
     }
   
      long vftableScan(const char* vftable)
-     {
-	    MEMORY_BASIC_INFORMATION MBI = { 0 };
-	    SYSTEM_INFO SI = { 0 };
-	    GetSystemInfo(&SI);
-	    DWORD Start = (DWORD)SI.lpMinimumApplicationAddress;
-  	  DWORD End = (DWORD)SI.lpMaximumApplicationAddress;
-	    do
-     	 {
-	  	  while (VirtualQuery((void*)Start, &MBI, sizeof(MBI))) {
-		  	  if ((MBI.Protect & PAGE_READWRITE) && !(MBI.Protect & PAGE_GUARD))
-	  		  {
-		  		  for (DWORD i = (DWORD)(MBI.BaseAddress); i - (DWORD)(MBI.BaseAddress) < MBI.RegionSize; ++i)
-			  	  {
-			  	  	if (Compare((const char*)i, vftable, "xxxx"))
-					    	return i;
-			  	  }
-		  	  }
-		  	  Start += MBI.RegionSize;
-	  	  }
-  	  } while (Start < End);
-	    return 0;
-   }
+{
+	MEMORY_BASIC_INFORMATION MBI = { 0 };
+	SYSTEM_INFO SI = { 0 };
+	GetSystemInfo(&SI);
+	DWORD Start = (DWORD)SI.lpMinimumApplicationAddress;
+	DWORD End = (DWORD)SI.lpMaximumApplicationAddress;
+	do
+	{
+		while (VirtualQuery((void*)Start, &MBI, sizeof(MBI))) {
+			if ((MBI.Protect & PAGE_READWRITE) && !(MBI.Protect & PAGE_GUARD))
+			{
+				for (DWORD i = (DWORD)(MBI.BaseAddress); i - (DWORD)(MBI.BaseAddress) < MBI.RegionSize; ++i)
+				{
+					if (Compare((const char*)i, vftable, "xxxx"))
+						return i;
+				}
+			}
+			Start += MBI.RegionSize;
+		}
+	} while (Start < End);
+	return 0;
+}
 }
