@@ -8,10 +8,7 @@
 //we might not need all of these
 
 extern "C" {
-#include "Lua\lua.h"
 #include "Lua\lua.hpp"
-#include "Lua\lualib.h"
-#include "Lua\lauxlib.h"
 #include "Lua\luaconf.h"
 }
 //someone should add these files to the github ^
