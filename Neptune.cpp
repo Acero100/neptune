@@ -39,10 +39,10 @@ int main() {
       rL = ScriptState(0, scriptContext); //todo: make this function (just paste psuedocode)
       if (debug) {
           std::cout << "Scanned!" << std::endl;
-		      for (;;) {
-				   std::string input;
-				   std::getline(std::cin, input);
+	  for (;;) {
+	   std::string input;
+	   std::getline(std::cin, input);
            //todo: create a thread and execute "input" on that thread
-			  }
+	  }
      }
 }
