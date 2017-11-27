@@ -1,5 +1,5 @@
 # Neptune
-Neptune is a community open source roblox exploit that is being contributed too by 10 devs.
+Neptune is a community open source roblox exploit that is being contributed too by 10 ~devs~ skids.
 Join our discord [here](https://discord.gg/nTAmvX2).
 
 100% Not skidded
@@ -13,4 +13,3 @@ Join our discord [here](https://discord.gg/nTAmvX2).
 • PooTangInaMOo
 • Curry
 • Dawn
-
